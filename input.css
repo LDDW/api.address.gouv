@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li:last-child {
+    border-width: 0;
+}
+
+.selected {
+    background: #2563eb;
+    color: #ffffff;
+}
