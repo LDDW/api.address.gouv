@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+li:last-child {
+    border-width: 0;
+}
+
+.selected {
+    background: #2563eb;
+    color: #ffffff;
+}
+
+.result_item {
+    border-bottom: solid 0.5px #94a3b8;
+    padding: 12px;
+    background: #f8fafc;
+    cursor: pointer;
+}
+.result_item:hover {
+    background: #e2e8f0;
+}

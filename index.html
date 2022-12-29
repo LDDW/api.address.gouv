@@ -4,19 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="output.css">
+    <title>API GOUV</title>
+    <!-- BOXICONS -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/output.css">
 </head>
 <body>
-    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-        <input type="text" name="search" id="search" class="w-96 py-3 px-5 border-[0.5px] border-slate-400 rounded-full" placeholder="Rechercher une adresse">
-        <ul class="absolute top-14 left-1/2 -translate-x-1/2 w-11/12 border-[0.5px] border-slate-400 shadow-sm rounded-lg overflow-hidden hidden" id="result"></ul>
-    </div>
+    <main class="h-[calc(100vh-108px)]">
+        <h1 class="text-center pt-32 text-3xl font-semibold">API GOUV</h1>
+        <div class="w-2/5 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <input type="text" name="search" id="search" class="w-full py-3 px-5 mb-6 border-[0.5px] border-slate-400 rounded-full" placeholder="Rechercher une adresse">
+            <ul class="absolute z-20 top-14 left-1/2 -translate-x-1/2 w-11/12 border-[0.5px] border-slate-400 shadow-sm rounded-lg overflow-hidden hidden" id="result"></ul>
 
-    <input type="text" name="" id="address">
-    <input type="text" name="" id="postcode">
-    <input type="text" name="" id="city">
-
-    <script src="script.js"></script>
+            <div class="grid grid-cols-2 gap-6">
+                <div class="relative">
+                    <label for="input-firstname" class="block absolute -top-3 left-5 z-10 bg-white px-1 text-sm">Rue</label>
+                    <input type="text" id="street" class="w-full py-3 px-6 mb-2 text-sm bg-white border-2 border-gray-400 rounded-full outline-none focus:border-black transition-all" autocomplete="off" disabled>
+                </div>
+                <div class="relative">
+                    <label for="input-firstname" class="block absolute -top-3 left-5 z-10 bg-white px-1 text-sm">Code Postal</label>
+                    <input type="text" id="postcode" class="w-full py-3 px-6 mb-2 text-sm bg-white border-2 border-gray-400 rounded-full outline-none focus:border-black transition-all" autocomplete="off" disabled>
+                </div>
+                <div class="relative">
+                    <label for="input-firstname" class="block absolute -top-3 left-5 z-10 bg-white px-1 text-sm">Ville</label>
+                    <input type="text" id="city" class="w-full py-3 px-6 mb-2 text-sm bg-white border-2 border-gray-400 rounded-full outline-none focus:border-black transition-all" autocomplete="off" disabled>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-gray-900 py-10">
+        <a href="https://github.com/LDDW/api.address.gouv" target="_blank" class="flex items-center justify-center text-gray-100">
+            <p>Copyright 2023 LDDW</p>
+            <i class='bx bxl-github ml-2 text-xl'></i>
+        </a>
+    </footer>
+    <!-- JS -->
+    <script src="js/app.js"></script>
 </body>
 </html>
